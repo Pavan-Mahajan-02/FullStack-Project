@@ -1,0 +1,32 @@
+<!-- <p>addemp works!</p> -->
+<app-header></app-header>
+<div class="container contianer-fluid">
+<div class="row">
+    <div class="col-12">
+        <label for="">Name :</label>
+        <input [(ngModel)]="addData.name" class="form-control w-25" type="text" placeholder="Enter The Name"><br>
+
+        <label for="">Status :</label>
+        <input [(ngModel)]="addData.status" class="form-control w-25" type="text" placeholder="Enter The Status"><br>
+        
+        <label for="">Department :</label>
+        <input [(ngModel)]="addData.department" class="form-control w-25" type="text" placeholder="Enter The Department"><br>
+
+        <label for="">Mobile No :</label>
+        <input [(ngModel)]="addData.mobileno" class="form-control w-25" type="number" placeholder="Enter The Mobile No"><br>
+
+        <label for="">EmailId :</label>
+        <input [(ngModel)]="addData.emailid" class="form-control w-25" type="email" placeholder="Enter The Department"><br>
+
+        <label for="">Salary :</label>
+        <input [(ngModel)]="addData.salary" class="form-control w-25" type="number" placeholder="Enter The Salary"><br>
+
+       <label for="">Country :</label>
+        <select [(ngModel)]="addData.country" class="form-control w-25" name="" id="">
+            <option [ngValue]="item" *ngFor="let item of allCountry">{{item.cname}}</option>
+        </select><br>
+        <button (click)="onSubmit()" class="btn btn-success">Submit</button>
+    </div>
+
+</div>
+</div>
